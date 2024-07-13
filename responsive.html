@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Website</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 600px 300px 150px 150px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    
+        .images{
+            border: 1px solid blue;
+        }
+        .mine-part2{
+            width: 300px;
+            height: 300px;                 
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .mine-part3{
+            display: grid;
+            width: 300px;
+            height: 200px;
+            grid-template-columns: repeat(2, 2fr);
+        }
+        @media screen and (max-width:576px) {
+             .container{
+                grid-template-columns: repeat(1, 1fr);
+                height: 50%;
+                width: 50%;
+                
+             }
+             .mine-part3{
+                grid-template-columns: repeat(1, 1fr);
+             }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,6 +54,24 @@
             <li>Menu Responsive: will need JavaScript</li>
         </ol>
     </header>
-    
+    <section class="container">
+            <div class="images">
+                <img src="images/p1.jpg" alt="">
+            </div>
+            <div class="mine-part2">
+                <div class="images">
+                    <img src="images/p2.jpg" alt="">
+                </div>
+            <div class="mine-part3">
+                    <div class="images">
+                        <img src="images/p3.jpg" alt="">
+                    </div>
+                    <div class="images">
+                        <img src="images/p4.jpg" alt="">
+                    </div> 
+            </div>
+            </div>
+            
+    </section>
 </body>
 </html>
